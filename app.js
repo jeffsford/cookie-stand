@@ -18,12 +18,12 @@ var firstAndPike = {
   totalSales: function() {
     var dailySales = 0;
     for (i = 0; i < this.hourlySales.length; i++) {
-      dailySales += int(this.hourlySales[i]);
+      dailySales += parseInt(this.hourlySales[i]);
       console.log('hourly sale at ' + i + ': ' + this.hourlySales[i] );
       console.log('daily sales at ' + i + ': ' + dailySales);
     }
     return dailySales;
-  }
+  },
 };
 
 var seaTac = {
@@ -42,12 +42,12 @@ var seaTac = {
   totalSales: function() {
     var dailySales = 0;
     for (i = 0; i < this.hourlySales.length; i++) {
-      dailySales += int(this.hourlySales[i]);
+      dailySales += parseInt(this.hourlySales[i]);
       console.log('hourly sale at ' + i + ': ' + this.hourlySales[i] );
       console.log('daily sales at ' + i + ': ' + dailySales);
     }
     return dailySales;
-  }
+  },
 };
 
 var seaCenter = {
@@ -66,12 +66,12 @@ var seaCenter = {
   totalSales: function() {
     var dailySales = 0;
     for (i = 0; i < this.hourlySales.length; i++) {
-      dailySales += int(this.hourlySales[i]);
+      dailySales += parseInt(this.hourlySales[i]);
       console.log('hourly sale at ' + i + ': ' + this.hourlySales[i] );
       console.log('daily sales at ' + i + ': ' + dailySales);
     }
     return dailySales;
-  }
+  },
 };
 
 var capHill = {
@@ -90,12 +90,12 @@ var capHill = {
   totalSales: function() {
     var dailySales = 0;
     for (i = 0; i < this.hourlySales.length; i++) {
-      dailySales += int(this.hourlySales[i]);
+      dailySales += parseInt(this.hourlySales[i]);
       console.log('hourly sale at ' + i + ': ' + this.hourlySales[i] );
       console.log('daily sales at ' + i + ': ' + dailySales);
     }
     return dailySales;
-  }
+  },
 };
 
 var alki = {
@@ -114,10 +114,10 @@ var alki = {
   totalSales: function() {
     var dailySales = 0;
     for (i = 0; i < this.hourlySales.length; i++) {
-      dailySales += int(this.hourlySales[i]);
+      dailySales += parseInt(this.hourlySales[i]);
       console.log('hourly sale at ' + i + ': ' + this.hourlySales[i] );
       console.log('daily sales at ' + i + ': ' + dailySales);
     }
     return dailySales;
-  }
+  },
 };
