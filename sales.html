@@ -18,15 +18,15 @@
           </br>
           <br>
             <label for="mincust">Minimum Customers per Hour</label>
-              <input type="number" placeholder="Enter Minimum" name="mincust" />
+              <input type="number" placeholder="Enter Minimum" min="0" name="mincust" required />
           </br>
           <br>
             <label for="maxcust">Maximum Customers per Hour</label>
-              <input type="number" placeholder="Enter Maximum" name="maxcust" />
+              <input type="number" placeholder="Enter Maximum" min="1" name="maxcust" required />
           </br>
           <br>
             <label for="avgcust">Average Cookies per Customer</label>
-              <input type="number" step=".1" placeholder="Enter Average" name="avgcust" />
+              <input type="number" step=".1" placeholder="Enter Average" min="0" name="avgcust" required/>
           </br>
           <br>
             <input type="submit" value="Create Store" name="createstore" />
