@@ -1,16 +1,17 @@
 'use strict';
-
 var hours = ['', '6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm', 'Totals'];
 
 var body = document.getElementsByTagName('body')[0];
 
-var firstAndPike = new cookieStand(23, 65, 6.3,'1st and Pike');
-var seaTac = new cookieStand(3, 24, 1.2, 'SeaTac Airport');
-var seaCenter = new cookieStand(11, 38, 3.7, 'Seattle Center');
-var capHill = new cookieStand(20, 38, 2.3, 'Capitol Hill');
-var alki = new cookieStand(2, 16, 4.6, 'Alki');
+var allStores = [];
 
-function cookieStand(minCust, maxCust, avgCookies, name) {
+var firstAndPike = new CookieStand('1st and Pike',23, 65, 6.3);
+var seaTac = new CookieStand('SeaTac Airport', 3, 24, 1.2);
+var seaCenter = new CookieStand('Seattle Center', 11, 38, 3.7);
+var capHill = new CookieStand('Capitol Hill', 20, 38, 2.3);
+var alki = new CookieStand('Alki', 2, 16, 4.6);
+
+function CookieStand(name, minCust, maxCust, avgCookies) {
   this.minCust = minCust;
   this.maxCust = maxCust;
   this.avgCookies = avgCookies;
@@ -46,6 +47,7 @@ function cookieStand(minCust, maxCust, avgCookies, name) {
       tBodyCells.innerText = hourlySales[i];
     }
   };
+  allStores.push(this);
 };
 function createTable(){
   var tableMain = document.createElement('table');
@@ -60,9 +62,22 @@ function createTable(){
     tHeadCells.innerText = hours[i];
   };
 };
+
+var storeForm = document.getElementById('fishform');
+function submitForm(event) {
+  event.preventDefault();
+
+  var form = event.target;
+  var newStore = form.newstore.value;
+  var minimum = form.mincust.value;
+  var maximum = form.maxcust.value;
+  var average = form.avgcust.value;
+  var addStore = new CookieStand(newStore, minimum, maximum, average);
+  addStore.tableBody();
+};
+storeForm.addEventListener('submit', submitForm);
+
 createTable();
-firstAndPike.tableBody();
-seaTac.tableBody();
-seaCenter.tableBody();
-capHill.tableBody();
-alki.tableBody();
+for (var i = 0; i < allStores.length; i++) {
+  allStores[i].tableBody();
+};
