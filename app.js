@@ -72,8 +72,14 @@ function submitForm(event) {
   var minimum = form.mincust.value;
   var maximum = form.maxcust.value;
   var average = form.avgcust.value;
-  var addStore = new CookieStand(newStore, minimum, maximum, average);
-  addStore.tableBody();
+
+  if (minimum > maximum) {
+    alert('The minimum number of customers must be greater than the maximum number');
+  } else{
+    var addStore = new CookieStand(newStore, Math.floor(minimum), Math.floor(maximum), average);
+    addStore.tableBody();
+    form.reset();
+  }
 };
 storeForm.addEventListener('submit', submitForm);
 
