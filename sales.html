@@ -5,6 +5,37 @@
     <title></title>
   </head>
   <body>
+
+    <img src="https://github.com/codefellows/seattle-201d20/blob/master/class-06-dom-objects-domain_modeling/lab/assets/salmon.png?raw=true"/>
+
+    <form method="get" id="fishform">
+        <fieldset>
+
+          <br>
+            <label for="storename">Store Name:<label>
+            <input type="text" name="newstore" placeholder="Enter Store Name" id="storename" />
+
+          </br>
+          <br>
+            <label for="mincust">Minimum Customers per Hour</label>
+              <input type="number" placeholder="Enter Minimum" name="mincust" />
+          </br>
+          <br>
+            <label for="maxcust">Maximum Customers per Hour</label>
+              <input type="number" placeholder="Enter Maximum" name="maxcust" />
+          </br>
+          <br>
+            <label for="avgcust">Average Cookies per Customer</label>
+              <input type="number" step=".1" placeholder="Enter Average" name="avgcust" />
+          </br>
+          <br>
+            <input type="submit" value="Create Store" name="createstore" />
+          </br>
+
+        </fieldset>
+    </form>
+
+
     <script src="app.js" charset="utf-8"></script>
   </body>
 </html>
