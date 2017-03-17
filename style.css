@@ -1,0 +1,200 @@
+body {
+  font-family: Arial;
+  font-size: 14px;
+  line-height: 20px;
+  background-color: #5f5f5f;
+}
+#wrapper {
+  width: 980;
+  margin: 40 auto 0 auto;
+  position: relative;
+  height: 100%;
+  padding-top: 25px;
+  padding-left: 116px;
+
+}
+#header {
+  height: 265px;
+  width: 945px;
+
+}
+#cookiestorename {
+  height: 265px;
+  width: 195px;
+  float: left;
+  background-color: #af4f2f;
+  color: white;
+  text-align: center;
+  font-family:'Rubik Mono One', sans-serif;
+  font-size: 25px;
+}
+
+#pat {
+  padding-top: 15px;
+}
+
+#salmon {
+padding-top: 15px;
+}
+
+#cookie {
+padding-top: 15px;
+}
+
+#logo {
+  float: right;
+  height: 215px;
+  width: 750px;
+  background-color: #033f17;
+}
+#navbar {
+  background: #000;
+  height: 50px;
+  float: right;
+  width: 750px;
+  position: relative;
+  color: #fff;
+  font-weight: 700;
+  display: inline;
+  list-style-type: none;
+}
+#navlist {
+  list-style-type: none;
+}
+.navlistitems {
+  display: inline;
+  float: left;
+  font-size: 16px;
+  padding-left: 75px;
+}
+
+#container {
+  float: left;
+  width: 944px;
+  background-color: #fff;
+  min-height: 500px;
+}
+
+#welcomeheader {
+  width: 620px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  text-decoration: none;
+}
+
+.navlinks {
+  text-decoration: none;
+  color: inherit;
+}
+
+#welcomemessage {
+  width: 620px;
+  padding-bottom: 15px;
+  font-size: 20px;
+  padding-left: 5px;
+}
+#content {
+  width: 560px;
+}
+
+.contentheadline {
+width: 560px;
+color: #af4f2f;
+padding-left: 5px;
+}
+
+.contentimg {
+float: left;
+margin: 10px;
+border: 1px solid #5f5f5f;
+width: 130px;
+}
+
+.contentsection {
+padding-top: 6px;
+margin-bottom: 15px;
+}
+
+#family {
+  float: right;
+  border: 1px solid #5f5f5f;
+  width: 330px;
+  margin-top: 62px;
+  margin-right: 5px;
+  clear: left;
+}
+
+.listsaleitems {
+  margin-left: 155px;
+}
+
+.clear {
+  clear: both;
+}
+
+.eventslink {
+  margin-left: 155px;
+}
+
+#footer {
+  width: 945px;
+  height: 150px;
+  float: left;
+  background-color: #5f5f5f;
+}
+
+.locations {
+color: #fff;
+width: 600px;
+height: auto;
+margin-left: 44px;
+font-family: Georgia;
+font-style:italic;
+font-size: 10px;
+margin-top: 8px;
+padding-bottom: 2px;
+}
+
+.locationfields {
+  display: inline;
+  padding-bottom: 2px;
+  font-weight: bold;
+}
+
+#cutter {
+  float: left;
+  margin-top: 10px;
+  width: 130px;
+  border: 1px solid #5f5f5f;
+  display: inline;
+}
+
+#colorfulfish {
+    float: right;
+    border: 1px solid #5f5f5f;
+    width: 142px;
+    margin-top: -135px;
+    margin-right: -65px;
+    display: inline;
+}
+
+#fishform {
+background-color: #fff;
+width: 945px;
+margin-left: 115px;
+margin-top: 1px;
+}
+
+table {
+  background-color: #fff;
+  width: 945px;
+  margin-left: 115px;
+  text-align: center;
+}
+
+#salesfooter {
+  width: 945px;
+  height: 150px;
+  margin-left: 115px;
+  background-color: #5f5f5f;
+}
