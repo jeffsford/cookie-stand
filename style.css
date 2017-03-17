@@ -1,0 +1,149 @@
+body {
+  font-family: Arial;
+  font-size: 14px;
+  line-height: 20px;
+  background-color: #5f5f5f;
+}
+#wrapper {
+  width: 980;
+  margin: 40 auto 0 auto;
+  position: relative;
+  height: 100%;
+  padding-top: 25px;
+  padding-left: 116px;
+
+}
+#header {
+  height: 265px;
+  width: 945px;
+
+}
+#storename {
+  height: 265px;
+  width: 195px;
+  float: left;
+  background-color: #af4f2f;
+  color: white;
+  text-align: center;
+  font-family:'Rubik Mono One', sans-serif;
+  font-size: 25px;
+}
+
+#pat {
+  padding-top: 15px;
+}
+
+#salmon {
+padding-top: 15px;
+}
+
+#cookie {
+padding-top: 15px;
+}
+
+#logo {
+  float: right;
+  height: 215px;
+  width: 750px;
+  background-color: #033f17;
+}
+#navbar {
+  background: #000;
+  height: 50px;
+  float: right;
+  width: 750px;
+  position: relative;
+  color: #fff;
+  font-weight: 700;
+  display: inline;
+  list-style-type: none;
+}
+#navlist {
+  list-style-type: none;
+}
+.navlistitems {
+  display: inline;
+  float: left;
+  font-size: 16px;
+  padding-left: 75px;
+}
+
+#container {
+  float: left;
+  width: 944px;
+  background-color: #fff;
+  min-height: 500px;
+}
+
+#welcomeheader {
+  width: 620px;
+  padding-bottom: 5px;
+}
+
+#welcomemessage {
+  width: 620px;
+  padding-bottom: 15px;
+}
+#content {
+  width: 560px;
+}
+
+.contentheadline {
+width: 560px;
+color: #af4f2f;
+}
+
+.contentimg {
+float: left;
+margin: 10px;
+border: 1px solid #5f5f5f;
+width: 130px;
+}
+
+#cutter {
+  float: right;
+  margin: 10px;
+  border: 1px solid #5f5f5f;
+  width: 130px;
+  height: 130px;
+}
+
+.contentsection {
+padding-top: 6px;
+margin-bottom: 15px;
+}
+
+#family {
+  float: right;
+  border: 1px solid #5f5f5f;
+  width: 330px;
+  margin-top: 5px;
+  margin-right: 5px;
+}
+
+#colorfulfish {
+  float: right;
+  border: 1px solid #5f5f5f;
+  width: 330px;
+  margin-top: 138px;
+  margin-right: -331px;
+}
+
+#cutter {
+  float: right;
+  border: 1px solid #5f5f5f;
+  width: 330px;
+  margin-top: -10px;
+  margin-right: 5px;
+}
+
+.clear {
+  clear: both;
+}
+
+#sidebar {
+  width: 250px;
+  float: right;
+  margin: 30px 30px 0 0;
+  display: block;
+}
