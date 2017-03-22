@@ -150,3 +150,9 @@ function submitForm(event) {
   form.reset();
 }
 storeForm.addEventListener('submit', submitForm);
+
+createTable();
+
+for (var i = 0; i < allStores.length; i++) {
+  allStores[i].generateRow();
+}
