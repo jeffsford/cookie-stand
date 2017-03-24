@@ -50,7 +50,7 @@ function CookieStand(name, minCust, maxCust, avgCookies) {
       bodyRow.appendChild(bodyCells);
       bodyCells.innerText = hourlySales[i];
     }
-    bodyCells = document.createElement('td');
+    var bodyCells = document.createElement('td');
     bodyRow.appendChild(bodyCells);
     bodyCells.innerText = this.total;
   };
@@ -75,10 +75,6 @@ function createTable(){
     tHeadCells.innerText = hours[i];
   }
 
-  var tHeadCells = document.createElement('th');
-  headRow.appendChild(tHeadCells);
-  theHeadCells.innerText = hours[i];
-
   var tBody = document.createElement('tbody');
   table.appendChild(tBody);
   tBody.id = 'tablebodyid';
@@ -90,7 +86,7 @@ function createTable(){
 createTable();
 
 function eachHour() {
-  var table = document.getElementById('tableid');
+  var table = document.getElementsByTagName('table');
 
   var tFoot = document.getElementById('tablefootid');
   table.appendChild(tFoot);
