@@ -78,30 +78,6 @@ function createTable(){
   tBody.id = 'tablebodyid';
 
 }
-var storeForm = document.getElementById('fishform');
-function submitForm(event) {
-  event.preventDefault();
-
-  var form = event.target;
-  var newStore = form.newstore.value;
-  var minimum = form.mincust.value;
-  var maximum = form.maxcust.value;
-  var average = form.avgcust.value;
-
-  if (minimum > maximum) {
-    alert('The minimum number entered must be smaller than the maximum number.');
-  } else {
-    var addStore = new CookieStand(newStore, Math.floor(minimum), Math.floor(maximum), average);
-    addStore.generateRow();
-    var tFoot = document.getElementById('tablefootid');
-    var footRow = document.getElementById('totalsrow');
-    tFoot.removeChild(footRow);
-    eachHour();
-  }
-  form.reset();
-}
-
-storeForm.addEventListener('submit', submitForm);
 
 createTable();
 
@@ -145,3 +121,28 @@ function eachHour() {
   footRow.appendChild(totalData);
 };
 eachHour();
+
+var storeForm = document.getElementById('fishform');
+function submitForm(event) {
+  event.preventDefault();
+
+  var form = event.target;
+  var newStore = form.newstore.value;
+  var minimum = form.mincust.value;
+  var maximum = form.maxcust.value;
+  var average = form.avgcust.value;
+
+  if (minimum > maximum) {
+    alert('The minimum number entered must be smaller than the maximum number.');
+  } else {
+    var addStore = new CookieStand(newStore, Math.floor(minimum), Math.floor(maximum), average);
+    addStore.generateRow();
+    var tFoot = document.getElementById('tablefootid');
+    var footRow = document.getElementById('totalsrow');
+    tFoot.removeChild(footRow);
+    eachHour();
+  }
+  form.reset();
+}
+
+storeForm.addEventListener('submit', submitForm);
