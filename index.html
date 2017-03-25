@@ -2,23 +2,110 @@
 <html>
   <head>
      <meta charset="utf-8">
+     <link rel="stylesheet" href="style.css">
+     <link href="https://fonts.googleapis.com/css?family=Rubik+Mono+One" rel="stylesheet">
      <title></title>
   </head>
   <body>
-    <nav>
-    <section>
-        <img src="https://github.com/codefellows/seattle-201d20/blob/master/class-06-dom-objects-domain_modeling/lab/assets/salmon.png?raw=true"/>
-    </section>
-      <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
-    </nav>
+      <div id="wrapper">
+        <div id="header">
+          <div id="cookiestorename"><h1 id="pat">Pat's</h1><h2 id="salmon">Salmon</h2><h3 id="cookies">Cookies</h3></div>
+            <img id="logo" src="https://github.com/codefellows/seattle-201d20/blob/master/class-06-dom-objects-domain_modeling/lab/assets/salmon.png?raw=true"/>
+            <div id="navbar">
+              <ul>
+                <li class="navlistitems">
+                  <a class="navlinks" href="#welcomeheader">Home</a>
+                </li>
+                <li class="navlistitems">
+                  <a class="navlinks" href="#about">About Us</a>
+                </li>
+                <li class="navlistitems">
+                  <a class="navlinks" href="#merch">Merchandise</a>
+                </li>
+                <li class="navlistitems">
+                  <a class="navlinks" href="#events">Events</a>
+                </li>
+              </ul>
+            </div>
+        </div>
+        <div id="container">
+          <img id="family" src="https://github.com/codefellows/seattle-201d20/blob/master/class-09-css_wireframe_part_1/lab/assets/family.jpg?raw=true"/>
+          <h2 id="welcomeheader">WELCOME</h2>
+          <p id="welcomemessage"> Welcome to the online home of Seattle's legendary Pat's Salmon Cookies.  Pat's currently have five locations in the Seattle area, and we are rapidly expanding.  While you here, be sure to check on upcoming events in the area and check out the Pat's merchandise that is available for sale.<p>
+          <div id="content">
+            <div class="clear">
+              <h4 class="contentheadline">About Us</h4>
+              <img class="contentimg" src="https://github.com/codefellows/seattle-201d20/blob/master/class-09-css_wireframe_part_1/lab/assets/frosted-cookie.jpg?raw=true"/>
+              <p class="contentsection" id="about">Pat's Salmon cookies was founded in 2016 when our founder was tinkering with his famous cookie recipe on a cold and gray Seattle day. The result was something distinctly Seattle: salmon shaped cookies that are actually made with real salmon!<p>
+            </div>
+            <div class="clear">
+              <h4 class="contentheadline" id="merch">Merchandise</h4>
+              <img class="contentimg" src="https://github.com/codefellows/seattle-201d20/blob/master/class-09-css_wireframe_part_1/lab/assets/shirt.jpg?raw=true"/>
+              <p class="contentsection">
+                Items for sale include:
+                <ul>
+                  <li class="listsaleitems">T-shirts</li>
+                  <li class="listsaleitems">Mugs</li>
+                  <li class="listsaleitems">Stickers</li>
+                  <li class="listsaleitems">and much more...</li>
+                </ul>
+              </p>
+            </div>
+            <div class="clear">
+              <h4 class="contentheadline" id="events">Events</h4>
+              <img class="contentimg" src="https://github.com/codefellows/seattle-201d20/blob/master/class-09-css_wireframe_part_1/lab/assets/chinook.jpg?raw=true"/>
+              <p class="contentsection">Upcoming Salmon Events in the Area</p>
+                <ul>
+                  <li class="eventslink">
+                    <a href="http://www.salmondays.org/">Issaquah Salmon Days</a>
+                  </li>
+                  <li class=eventslink>
+                    <a href="http://www.nwsalmonderbyseries.com/derbies/">Northwest Salmon Derby Series</a>
+                  </li>
+                </ul>
+              <p>
+            </div>
+          </div>
+      </div>
+      <div id="footer">
+        <img id="cutter" src="https://github.com/codefellows/seattle-201d20/blob/master/class-09-css_wireframe_part_1/lab/assets/cutter.jpeg?raw=true"/>
+        <div class="locations">
+          <p class="locationfields">First and Pike,&nbsp;</p>
+          <p class="locationfields">101 Pike Street,&nbsp;</p>
+          <p class="locationfields">Seattle, WA,&nbsp;</p>
+          <p class="locationfields">6am-9pm,&nbsp;</p>
+          <p class="locationfields">(206) 555-1212</p>
 
-    <section></section>
-    <section></section>
-    <section></section>
+        <div class="locations">
+          <p class="locationfields">SeaTac Airport,&nbsp;</p>
+          <p class="locationfields">201 International Boulevard,&nbsp;</p>
+          <p class="locationfields">SeaTac, WA,&nbsp;</p>
+          <p class="locationfields">6am-9pm,&nbsp;</p>
+          <p class="locationfields">(206) 555-1212</p>
+
+        <div class="locations">
+          <p class="locationfields">Seattle Center,&nbsp;</p>
+          <p class="locationfields">201 Denny Way,&nbsp;</p>
+          <p class="locationfields">Seattle, WA,&nbsp;</p>
+          <p class="locationfields">6am-9pm,&nbsp;</p>
+          <p class="locationfields">(206) 555-1213</p>
+        </div>
+        <div class="locations">
+          <p class="locationfields">Capitol Hill,&nbsp;</p>
+          <p class="locationfields">201 Broadway Avenue,&nbsp;</p>
+          <p class="locationfields">Seattle, WA,&nbsp;</p>
+          <p class="locationfields">6am-9pm,&nbsp;</p>
+          <p class="locationfields">(206) 555-1214</p>
+        </div>
+        <div class="locations">
+          <p class="locationfields">Alki,&nbsp;</p>
+          <p class="locationfields">501 Main Street,&nbsp;</p>
+          <p class="locationfields">Seattle, WA,&nbsp;</p>
+          <p class="locationfields">6am-9pm,&nbsp;</p>
+          <p class="locationfields">(206) 555-1215</p>
+        </div>
+        <img id="colorfulfish" src="https://github.com/codefellows/seattle-201d20/blob/master/class-09-css_wireframe_part_1/lab/assets/fish.jpg?raw=true"/>
+      </div>
 
      <script src="app.js" charset="utf-8"></script>
    </body>
