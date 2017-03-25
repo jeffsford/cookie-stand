@@ -78,7 +78,7 @@ function createTable(){
   table.appendChild(tBody);
   tBody.id = 'tablebodyid';
 
-  var tFoot = document.createElement('tablefootid');
+  var tFoot = document.createElement('tfoot');
   table.appendChild(tFoot);
   tFoot.id = 'tablefootid';
 
@@ -87,7 +87,7 @@ function createTable(){
 createTable();
 
 function eachHour() {
-  var table = document.getElementsByTagName('table');[0];
+  var table = document.getElementsByTagName('table');
   body.appendChild(table);
 
   var tFoot = document.getElementById('id')('tablefootid');
