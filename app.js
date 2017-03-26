@@ -33,14 +33,15 @@ function CookieStand(name, minCust, maxCust, avgCookies) {
 
   this.generateRow = function() {
     this.cookiesTotal();
-    var table = document.getElementsByTagName('table')[0];
-    var tBody = document.createElement('tbody');
-    table.appendChild(tBody);
+    var tableMain = document.getElementById('tableid');
+    body.appendChild(tableMain);
+    var tBody = document.getElementById('tablebodyid');
+    tableMain.appendChild(tBody);
     var tBodyRow = document.createElement('tr');
     tBody.appendChild(tBodyRow);
-    var tBodyHead = document.createElement('th');
-    tBodyRow.appendChild(tBodyHead);
-    tBodyHead.innerText = this.name;
+    var storeName = document.createElement('th');
+    tBodyRow.appendChild(storeName);
+    storeName.innerText = this.name;
     for (var i = 0; i < hours.length - 1; i++) {
       var tBodyCells = document.createElement('td');
       tBodyRow.appendChild(tBodyCells);
@@ -52,15 +53,22 @@ function CookieStand(name, minCust, maxCust, avgCookies) {
 function createTable(){
   var tableMain = document.createElement('table');
   body.appendChild(tableMain);
+  tableMain.id = 'tableid';
   var tHead = document.createElement('thead');
   tableMain.appendChild(tHead);
-  var tableRow = document.createElement('tr');
-  tHead.appendChild(tableRow);
+  var tHeadRow = document.createElement('tr');
+  tHead.appendChild(tHeadRow);
   for (var i = 0; i < hours.length; i++) {
     var tHeadCells = document.createElement('th');
-    tableRow.appendChild(tHeadCells);
+    tHeadRow.appendChild(tHeadCells);
     tHeadCells.innerText = hours[i];
   };
+  var tBody = document.createElement('tbody');
+  tableMain.appendChild(tBody);
+  tBody.id = 'tablebodyid';
+  var tFoot = document.createElement('tfoot');
+  tableMain.appendChild(tFoot);
+  tFoot.id = 'tablefootid';
 };
 
 var storeForm = document.getElementById('fishform');
@@ -89,10 +97,10 @@ for (var i = 0; i < allStores.length; i++) {
 };
 
 function eachHour() {
-  var table = getElementsByTagName('table')[0];
-  body.appendChild(table);
-  var tFoot = document.createElement('tfoot');
-  table.appendChild(tFoot);
+  var tableMain = getElementById('tableid');
+  body.appendChild(tableMain);
+  var tFoot = document.getElementById('tablefootid');
+  tableMain.appendChild(tFoot);
   var tRow = document.createElement('tr');
   tFoot.appendChild(tRow);
   var totalsTH = document.createElement('th');
