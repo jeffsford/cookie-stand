@@ -31,7 +31,7 @@ function CookieStand(name, minCust, maxCust, avgCookies) {
     }
   };
 
-  this.tableBody = function() {
+  this.generateRow = function() {
     this.cookiesTotal();
     var table = document.getElementsByTagName('table')[0];
     var tBody = document.createElement('tbody');
@@ -77,7 +77,7 @@ function submitForm(event) {
     alert('The minimum number of customers must be greater than the maximum number');
   } else{
     var addStore = new CookieStand(newStore, Math.floor(minimum), Math.floor(maximum), average);
-    addStore.tableBody();
+    addStore.generateRow();
     form.reset();
   }
 };
@@ -85,5 +85,27 @@ storeForm.addEventListener('submit', submitForm);
 
 createTable();
 for (var i = 0; i < allStores.length; i++) {
-  allStores[i].tableBody();
+  allStores[i].generateRow();
 };
+
+function eachHour() {
+  var table = getElementsByTagName('table')[0];
+  body.appendChild(table);
+  var tFoot = document.createElement('tfoot');
+  table.appendChild(tFoot);
+  var tRow = document.createElement('tr');
+  tFoot.appendChild(tRow);
+  var totalsTH = document.createElement('th');
+  totalsTH.innerText = 'Totals';
+  tRow.appendChild(totalsTH);
+  for (var i = 0; i < hours.length - 2; i++) {
+    var sumHours = 0;
+    for (var j = 0; j < allStores.length; j++) {
+      sumHours += allStores[j].hourlySales[i];
+    }
+    var footerTH = document.createElement('th');
+    footerTH.innerText = sumHours;
+    tRow.appendChild(footerTH);
+  }
+};
+eachHour();
