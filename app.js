@@ -78,19 +78,20 @@ function eachHour() {
   body.appendChild(tableMain);
   var tFoot = document.getElementById('tablefootid');
   tableMain.appendChild(tFoot);
-  var tRow = document.createElement('tr');
-  tFoot.appendChild(tRow);
-  var totalsTh = document.createElement('th');
-  totalsTh.innerText = 'Totals';
-  tRow.appendChild(totalsTh);
+  var tFootRow = document.createElement('tr');
+  tFoot.appendChild(tFootRow);
+  tFootRow.id = 'totalsrowid';
+  var footRowName = document.createElement('th');
+  footRowName.innerText = 'Totals';
+  tFootRow.appendChild(footRowName);
   for (var i = 0; i < hours.length - 1; i++) {
     var sumHours = 0;
     for (var j = 0; j < allStores.length; j++) {
       sumHours += allStores[j].hourlySales[i];
     }
-    var footTD = document.createElement('th');
-    footTD.innerText = sumHours;
-    tRow.appendChild(footTD);
+    var tFootCells = document.createElement('th');
+    tFootCells.innerText = sumHours;
+    tFootRow.appendChild(tFootCells);
   }
   var totalTotal = 0;
   for (var i = 0; i < allStores.length; i++) {
@@ -98,7 +99,7 @@ function eachHour() {
   }
   var totalTd = document.createElement('td');
   totalTd.innerText = totalTotal;
-  tRow.appendChild(totalTd);
+  tFootRow.appendChild(totalTd);
 };
 for (var i = 0; i < allStores.length; i++) {
   allStores[i].generateRow();
