@@ -1,7 +1,7 @@
 'use strict';
 var hours = ['', '6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm', 'Totals'];
 
-var body = document.getElementsByTagName('body')[0];
+var div = document.getElementById('table-div');
 
 var allStores = [];
 
@@ -33,6 +33,7 @@ function CookieStand(name, minCust, maxCust, avgCookies) {
   this.generateRow = function() {
     this.cookiesTotal();
     var tableMain = document.getElementById('tableid');
+    div.appendChild(tableMain);
     var tBody = document.getElementById('tablebodyid');
     tableMain.appendChild(tBody);
     var tBodyRow = document.createElement('tr');
@@ -53,7 +54,7 @@ function CookieStand(name, minCust, maxCust, avgCookies) {
 };
 function createTable(){
   var tableMain = document.createElement('table');
-  body.appendChild(tableMain);
+  div.appendChild(tableMain);
   tableMain.id = 'tableid';
   var tHead = document.createElement('thead');
   tableMain.appendChild(tHead);
@@ -75,7 +76,7 @@ createTable();
 
 function eachHour() {
   var tableMain = getElementById('tableid');
-  body.appendChild(tableMain);
+  div.appendChild(tableMain);
   var tFoot = document.getElementById('tablefootid');
   tableMain.appendChild(tFoot);
   var tFootRow = document.createElement('tr');
